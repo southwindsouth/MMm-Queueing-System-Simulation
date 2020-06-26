@@ -1,0 +1,19 @@
+import math
+m=2
+x1 = np.arange(1, 100)
+rou=x1/100
+n=0
+miu=100/m
+
+for n in range(m-1):
+   xigema=math.pow(m*rou,n)/math.factorial(n)
+
+xigema_right=(1/(1-rou))*math.pow(m*rou,m)/math.factorial(m)
+
+p0=1/(xigema+xigema_right) 
+
+ 
+pm_plus=p0*math.pow(m*rou,m)/math.factorial(m)/(1-rou)
+
+
+y1=pm_plus*rou/(1-rou)/x1+1/miu
